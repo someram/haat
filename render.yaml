@@ -1,0 +1,24 @@
+# One-click deploy on Render (https://render.com): New → Blueprint → pick this repository.
+# Free plan: the site sleeps after 15 minutes idle (first visit then takes ~1 minute),
+# and the SQLite file resets to the demo data whenever the service restarts — handy for demos.
+services:
+  - type: web
+    name: haat
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/stores
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      # Your own domain, e.g. haat.in, with DNS records for haat.in AND *.haat.in pointing here.
+      # Each store is then served at <store-address>.haat.in. Leave empty to use /s/<store-address>.
+      - key: APP_DOMAIN
+        sync: false
+      - key: TRUST_PROXY
+        value: "1"
