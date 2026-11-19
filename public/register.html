@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open a store — Haat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@600;700&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/haat.css">
+</head>
+<body>
+  <div class="auth-wrap">
+    <aside class="auth-side">
+      <a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span>Haat</a>
+      <div class="awning-stack" aria-hidden="true">
+        <div class="awning" style="--c:#F0A202"></div>
+        <div class="awning" style="--c:#2F7FA8"></div>
+        <div class="awning" style="--c:#B83A55"></div>
+      </div>
+      <blockquote>Set up your stall in a few minutes.</blockquote>
+    </aside>
+    <main class="auth-main">
+      <div class="auth-card">
+        <h1>Open a store</h1>
+        <p class="muted">Create your business account. You'll set up the store itself next.</p>
+        <form id="register-form" novalidate>
+          <div class="form-error hidden" data-error role="alert"></div>
+          <div class="field">
+            <label for="businessName">Business name</label>
+            <input id="businessName" name="businessName" data-field="Business name" required>
+          </div>
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" autocomplete="name" data-field="Your name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" data-field="Email" required>
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" autocomplete="new-password" minlength="8" data-field="Password" required>
+            <div class="hint">At least 8 characters.</div>
+          </div>
+          <button class="btn block" type="submit">Create account</button>
+        </form>
+        <p class="small muted" style="margin-top:1rem">Already have an account? <a href="/login">Log in</a></p>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="/assets/js/register.js"></script>
+</body>
+</html>

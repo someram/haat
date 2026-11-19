@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin console — Haat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@600;700&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/haat.css">
+</head>
+<body>
+  <div class="mobile-bar">
+    <a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span>Haat</a>
+    <button id="menu-btn" type="button">Menu</button>
+  </div>
+  <div class="console">
+    <aside class="side" aria-label="Admin">
+      <a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span>Haat</a>
+      <nav id="side-nav"></nav>
+      <div class="who" id="who"></div>
+    </aside>
+    <main class="main" id="view" tabindex="-1"><p class="muted">Loading…</p></main>
+  </div>
+
+  <dialog id="tenant-dlg" class="form-dlg" aria-labelledby="tenant-dlg-title">
+    <form id="tenant-form" novalidate>
+      <div class="dlg-hero">
+        <div class="dlg-hero-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l2-5h14l2 5M3 9h18v2a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0zM5 13v8h14v-8"/></svg></div>
+        <div>
+          <h3 id="tenant-dlg-title">Add a business</h3>
+          <p>Creates the business and a login for its owner. They set up their store after logging in.</p>
+        </div>
+        <button class="x" type="button" data-close aria-label="Close">×</button>
+      </div>
+      <div class="dlg-body">
+        <div class="form-error hidden" data-error role="alert"></div>
+        <fieldset class="dlg-group">
+          <legend>Business</legend>
+          <div class="field"><label for="t-biz">Business name</label><input id="t-biz" name="businessName" placeholder="e.g. Kolkata Kitchen" autocomplete="organization" data-field="Business name" required></div>
+        </fieldset>
+        <fieldset class="dlg-group">
+          <legend>Owner login</legend>
+          <div class="row">
+            <div class="field"><label for="t-owner">Owner name</label><input id="t-owner" name="ownerName" placeholder="Full name" autocomplete="name" data-field="Owner name" required></div>
+            <div class="field"><label for="t-email">Owner email</label><input id="t-email" name="email" type="email" placeholder="owner@example.com" autocomplete="email" data-field="Owner email" required></div>
+          </div>
+          <div class="field">
+            <label for="t-pw">Temporary password</label>
+            <div class="pw-row">
+              <input id="t-pw" name="password" type="password" autocomplete="new-password" data-field="Temporary password" minlength="8" required>
+              <button class="btn ghost sm" type="button" id="pw-show" aria-controls="t-pw">Show</button>
+              <button class="btn ghost sm" type="button" id="pw-gen">Generate</button>
+            </div>
+            <div class="hint">At least 8 characters. Share it with the owner; they can log in with it straight away.</div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="dlg-foot">
+        <button class="btn ghost" type="button" data-close>Cancel</button>
+        <button class="btn marigold" type="submit" id="tenant-save">Add business</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="status-dlg" aria-labelledby="status-title">
+    <div class="dlg-head"><h3 id="status-title"></h3></div>
+    <div class="dlg-body"><p id="status-text"></p></div>
+    <div class="dlg-foot">
+      <button class="btn ghost" type="button" data-close>Cancel</button>
+      <button class="btn" type="button" id="status-ok"></button>
+    </div>
+  </dialog>
+
+  <script type="module" src="/assets/js/admin.js"></script>
+</body>
+</html>

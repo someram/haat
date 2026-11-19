@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Haat — many shops, one marketplace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@600;700&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/haat.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span>Haat</a>
+    <nav id="nav">
+      <a class="btn ghost sm" href="/login">Log in</a>
+      <a class="btn sm" href="/register">Open a store</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Many shops. One haat.</h1>
+      <p class="lede">Like a village haat where every seller has their own stall, Haat lets independent
+        businesses open their own online store on one shared platform. Each store keeps its own
+        products, stock and orders, and no store can see another's.</p>
+      <div class="cta">
+        <a class="btn marigold" href="/register">Open your store</a>
+        <a class="btn ghost" href="#market">Walk the market</a>
+      </div>
+    </section>
+
+    <section class="market" id="market" aria-labelledby="market-title">
+      <div class="market-head">
+        <h2 id="market-title">Open today</h2>
+        <span class="muted small" id="store-count"></span>
+      </div>
+      <div class="stalls" id="stalls"><p class="muted">Loading stores…</p></div>
+    </section>
+
+    <section class="roles" aria-labelledby="roles-title">
+      <div class="roles-inner">
+        <div>
+          <h2 id="roles-title">Three people use Haat</h2>
+          <p class="muted">Everyone shares the same application. What each of them can see and change
+            is decided on the server, not by which buttons are shown.</p>
+        </div>
+        <div class="role-list">
+          <div class="role">
+            <h3>The administrator</h3>
+            <p>Adds businesses to the platform and can switch a business off. Sees totals, never runs anyone's shop.</p>
+          </div>
+          <div class="role">
+            <h3>The store owner</h3>
+            <p>Sets up one store, adds products, publishes them, keeps stock up to date and moves orders from pending to delivered.</p>
+          </div>
+          <div class="role">
+            <h3>The shopper</h3>
+            <p>Browses a single store, fills a cart from that store only, and checks out. Stock and totals are checked on the server.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">Haat · Final year project, Department of Computer Science, Swami Vivekananda University</footer>
+  <script type="module" src="/assets/js/home.js"></script>
+</body>
+</html>

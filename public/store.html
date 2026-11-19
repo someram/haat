@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Store — Haat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@600;700&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/haat.css">
+</head>
+<body>
+  <div id="app"><p class="muted" style="padding:2rem">Loading store…</p></div>
+
+  <!-- Product detail -->
+  <dialog id="product-dlg" aria-labelledby="pd-title">
+    <div class="dlg-head"><h3 id="pd-title"></h3><button class="x" type="button" data-close aria-label="Close">×</button></div>
+    <div class="dlg-body" id="pd-body"></div>
+  </dialog>
+
+  <!-- Cart drawer -->
+  <dialog id="cart-dlg" class="drawer" aria-labelledby="cart-title">
+    <div class="dlg-head"><h3 id="cart-title">Your cart</h3><button class="x" type="button" data-close aria-label="Close">×</button></div>
+    <div class="dlg-body" id="cart-body"></div>
+  </dialog>
+
+  <script type="module" src="/assets/js/store.js"></script>
+</body>
+</html>

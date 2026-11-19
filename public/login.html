@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log in — Haat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@600;700&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/haat.css">
+</head>
+<body>
+  <div class="auth-wrap">
+    <aside class="auth-side">
+      <a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span>Haat</a>
+      <div class="awning-stack" aria-hidden="true">
+        <div class="awning" style="--c:#2F7D5B"></div>
+        <div class="awning" style="--c:#B5502A"></div>
+        <div class="awning" style="--c:#3A4FA3"></div>
+      </div>
+      <blockquote>Every stall its own. One market for all.</blockquote>
+    </aside>
+    <main class="auth-main">
+      <div class="auth-card">
+        <h1>Log in</h1>
+        <p class="muted">Store owners and administrators log in here.</p>
+        <form id="login-form" novalidate>
+          <div class="form-error hidden" data-error role="alert"></div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" data-field="Email" required>
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" data-field="Password" required>
+          </div>
+          <button class="btn block" type="submit">Log in</button>
+        </form>
+        <p class="small muted" style="margin-top:1rem">New business? <a href="/register">Open a store</a></p>
+
+        <div class="demo-logins">
+          <p class="small" style="margin:0 0 .4rem"><b>Demo accounts</b> — click one to fill the form</p>
+          <button type="button" data-demo="admin@haat.local|admin1234"><b>Admin</b> admin@haat.local</button>
+          <button type="button" data-demo="rina@chaghar.in|password123"><b>Cha Ghar</b> rina@chaghar.in</button>
+          <button type="button" data-demo="sourav@matirkaaj.in|password123"><b>Matir Kaaj</b> sourav@matirkaaj.in</button>
+          <button type="button" data-demo="mitali@shantimishti.in|password123"><b>Inactive</b> mitali@shantimishti.in</button>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="/assets/js/login.js"></script>
+</body>
+</html>
